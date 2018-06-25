@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Karwa WebApp</title>
+<style>
+a:link {
+	text-decoration:none;
+    color: white;
+    background-color: transparent;
+	font-size:175%;
+	font-family:Century Gothic ;
+}
+a:visited {
+	text-decoration:none;
+    color: white;
+    background-color: transparent;
+	font-size:175%;
+	font-family:Century Gothic ;
+}
+a:hover {
+	text-decoration:none;
+    color: yellow;
+    background-color: transparent;
+	font-size:175%;
+	font-family:Century Gothic ;
+}
+</style>
+
+</head>
+<body bgcolor="#00e6e6">
+	<p style="text-align:center">
+	<img src="karwa.png" style= "width:100px;height:100px;";>
+	</p>
+	<p  style="color:white; font-family:Century Gothic ; font-size:250%; text-align: center;">  Make A Booking</p>
+<form style="text-align:center" align="center" action="<?=$_SERVER['PHP_SELF']?>">
+	<p style= "font-family:Century Gothic ; color:white; font-weight: bold;" >
+    	<label for="departure">Pick Up Location:</label>
+        <input type="text" name="departure" id="departure">
+    </p>
+    <p style= "font-family:Century Gothic ; color:white; font-weight: bold;">
+    	<label for="destination">Drop Off Location:</label>
+        <input type="text" name="destination" id="destination">
+    </p>
+	<p style= "font-family:Century Gothic ; color:white; font-weight: bold;" >
+    	<label for="pickTime">Pick Up Time:</label>
+        <input type="time" name="pickTime" id="pickTime">
+    </p>
+	<p style= "font-family:Century Gothic ;color:white; font-weight: bold;" >
+    	<label for="pickDate">Pick Up Date:</label>
+        <input type="date" name="pickDate" id="pickDate">
+    </p>
+	<p style= "font-family:Century Gothic ;color:white; font-weight: bold;" >
+    	<label for="extraDetails">Extra Information:</label>
+        <input type="text" name="extraDetails" id="extraDetails">
+    </p>
+    <input type="submit" name="Update">
+</form>
+
+<br>
+<form style="text-align:center" action="<?=$_SERVER['PHP_SELF']?>">
+    <input type="submit" name="Go Back" />
+</form>
+
+<?php
+if(isset($_POST["Update"])){
+	echo "hala";
+	#$bookingID = $_GET['bookID'];
+	#header("location: updates.php" . "?bookID=".$bookingID);
+}
+elseif (isset($_POST["Go Back"])){
+	echo "jala";
+	#header("location: Booking.html");
+}
+?>
+
+
+
+</body>
+</html>
